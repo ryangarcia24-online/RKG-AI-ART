@@ -27,8 +27,6 @@
 
 <body>
 
-
-
     <!-- Example: Brand/Logo + Navbar Text -->
     <nav class="navbar navbar-expand-sm navbar-dark fixed-top" 
      style="background-color: rgba(0, 0, 0, 0.7) !important;">
@@ -126,14 +124,7 @@
 
     <!------------------------------------>
 
-    <div id="imageModal" class="modal">
-  <span class="close">&times;</span>
-  <button class="prev">&#10094;</button>
-  <img class="modal-content" id="fullImage">
-  <button class="next">&#10095;</button>
-</div>
-
-
+ 
 <div class="bento-grid">
   <div class="card card-large">
     <img src="images/1.jpg" alt="Featured Project">
@@ -230,7 +221,13 @@
 
 <!------------------------------------>
 
-  
+  <!--Modal Code-->
+   <div id="imageModal" class="modal">
+  <span class="close">&times;</span>
+  <button class="prev">&#10094;</button>
+  <img class="modal-content" id="fullImage">
+  <button class="next">&#10095;</button>
+</div>
 
      
 
@@ -386,6 +383,9 @@ document.addEventListener("keydown", (e) => {
 
 // Ensure this line in your "Open Modal" section looks like this:
 modal.style.display = "flex";
+
+// Force hide on load
+document.getElementById("imageModal").style.display = "none";
 
     </script>
 
