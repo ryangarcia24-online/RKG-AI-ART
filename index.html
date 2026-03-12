@@ -16,6 +16,7 @@
     <link href="css/hover.css" rel="stylesheet" />
     <link href="css/bento.css" rel="stylesheet" />
     <link href="css/modal.css" rel="stylesheet" />
+	<link href="css/upbutton.css" rel="stylesheet" />
     <link rel="icon" href="images/logo.jpg" sizes="any">
     <link rel="icon" type="image/svg+xml" href="images/logo.jpg">
     <link rel="apple-touch-icon" href="images/logo.jpg">
@@ -27,82 +28,62 @@
 
 <body>
 
-    <!-- Example: Brand/Logo + Navbar Text -->
-    <nav class="navbar navbar-expand-sm navbar-dark fixed-top" 
-     style="background-color: rgba(0, 0, 0, 0.7) !important;">
-   
-            <!-- Brand / Logo -->
-          <a class="navbar-brand d-flex align-items-center gap-2" href="#Home">
-    <img src="images/logo.jpg"
-         alt="Logo"
-         width="32"
-         height="32"
-         class="rounded" />
-    <span class="nav-link">
-        RKG's AI Art
-    </span>
-</a>
+  <nav class="navbar navbar-expand-sm fixed-top artistic-nav">
+  <div class="container">
+    <a class="navbar-brand d-flex align-items-center gap-2" href="#Home">
+      <div class="logo-wrapper">
+        <img src="images/logo.jpg" alt="Logo" width="35" height="35" class="rounded-circle shadow-sm" />
+      </div>
+      <span class="brand-text">RKG's <span class="accent-text">AI Art</span></span>
+    </a>
 
-            <!-- Toggler (for small screens) -->
-            <button class="navbar-toggler"
-                    type="button"
-                    data-bs-toggle="collapse"
-                    data-bs-target="#mainNavbar"
-                    aria-controls="mainNavbar"
-                    aria-expanded="false"
-                    aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
+    <button class="navbar-toggler custom-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar">
+      <span class="navbar-toggler-icon"></span>
+    </button>
 
-            <div class="collapse navbar-collapse" id="mainNavbar">
-                <!-- Left links -->
-                <ul class="navbar-nav ms-auto mb-2 mb-sm-0">
-                    <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="#Home">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#Guide">Gallery</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#Contact">Contact</a>
-                    </li>
-                </ul>
-            </div>
-
-    </nav>
+    <div class="collapse navbar-collapse" id="mainNavbar">
+      <ul class="navbar-nav ms-auto align-items-center">
+        <li class="nav-item">
+          <a class="nav-link artistic-link active" href="#Home">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link artistic-link" href="#Guide">Gallery</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link artistic-link" href="#Contact">Contact</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
 
 
     <!-- Home -->
 
-    <section id="Home" class="text-white py-5 mt-5 text-center">
+  <section id="Home" class="text-white py-5 mt-5 text-center">
     <div class="container">
-    <!--<div class="hero-image-container text-center">-->
-            
-  <div class="text-center">
-
-
-     <div class="row g-0 align-items-center justify-content-center">
-  <video autoplay muted loop playsinline style="width: 1000px; height: auto; object-fit: cover; display: block; border: 6px solid white; border-radius: 20px; box-shadow: 0px 4px 20px rgb(255, 0, 220);" class= "pulse-glow">
-    <source src="videos/aiart.mp4" type="video/mp4">
-  </video>
-</div>
+        <div class="text-center">
+            <div class="row g-0 align-items-center justify-content-center">
+                <video autoplay muted loop playsinline 
+                       style="width: 1000px; max-width: 90%; height: auto; object-fit: cover; display: block; border-radius: 10px;" 
+                       class="pulse-glow">
+                    <source src="videos/aiart.mp4" type="video/mp4">
+                </video>
+            </div>
 
             <h1 class="display-4 fw-bold mt-5">Welcome to <br>RKG's AI Art</h1>
             
-            <p class="lead mt-3">
-                At RKG AI Art, we believe that algorithms can dream. This is a sanctuary for the subconscious, a gallery where lines of code bloom into breathtaking visual poetry. Each creation is a journey into the uncharted territory of the digital mind, capturing fleeting moments of beauty, haunting narratives, and impossible vistas. Prepare to see the world not as it is, but as the machine imagines it.
+            <p class="lead mt-3 mx-auto" style="max-width: 800px;">
+                At RKG AI Art, we believe that <span style="color: #ff00dc;">algorithms can dream</span>. 
+                This is a sanctuary for the subconscious, a gallery where lines of code bloom into breathtaking visual poetry. 
+                Prepare to see the world not as it is, but as the machine imagines it.
             </p>
 
             <div class="mt-4">
-                <a href="https://www.facebook.com/rkgsaiart/" class="btn btn-lg px-5 fw-bold" 
-                   class="btn btn-lg px-5 fw-bold transition-all duration-300 hover:scale-105"
-   style="background-color: #ff00dc; color: white; border-radius: 50px; box-shadow: 0 0 15px rgba(255, 0, 220, 0.6);"
-   onmouseover="this.style.boxShadow='0 0 30px rgba(255, 0, 220, 1)'"
-   onmouseout="this.style.boxShadow='0 0 15px rgba(255, 0, 220, 0.6)'">
-   FOLLOW ON FACEBOOK
+                <a href="https://www.facebook.com/rkgsaiart/" class="btn btn-lg btn-artistic">
+                   EXPLORE THE ARCHIVE
                 </a>
             </div>
-
         </div>
     </div>
 </section>
@@ -112,12 +93,8 @@
     <!-- AI Prompt Gallery -->
 
     <section id="Guide" class="text-white py-5 text-center">
-
-        <div class="container">
-            <!--<div class="hero-image-container text-center">-->
-
-
-                <h1 class="display-4 fw-bold">DIGITAL ART GALLERY</h1>
+    <div class="container">
+        <h2 class="display-4 fw-bold mb-5">DIGITAL ART GALLERY</h2>
 
 
                 <!--<p class="lead mt-3">Where imagination meets instruction. This gallery is a curated collection of precision-engineered prompts designed to push the boundaries of AI creativity.</p>-->
@@ -130,204 +107,204 @@
 
  
 <div class="bento-grid">
-  <div class="card card-large">
+  <div class="card card-large pulse-glow">
     <img src="images/1.jpg" alt="Featured Project">
   </div>
-  <div class="card">
+  <div class="card pulse-glow">
     <img src="images/2.jpg" alt="Gallery 1">
   </div>
-  <div class="card">
+  <div class="card pulse-glow">
     <img src="images/3.jpg" alt="Gallery 2">
   </div>
-  <div class="card card-wide">
+  <div class="card card-wide pulse-glow">
     <img src="images/4.jpg" alt="Wide View">
   </div>
-  <div class="card card-tall">
+  <div class="card card-tall pulse-glow">
     <img src="images/5.jpg" alt="Vertical Shot">
   </div>
-  <div class="card">
+  <div class="card pulse-glow">
     <img src="images/6.jpg" alt="Gallery 3">
   </div>
-  <div class="card">
+  <div class="card pulse-glow">
     <img src="images/7.jpg" alt="Gallery 3">
   </div>
-   <div class="card card-tall">
+   <div class="card card-tall pulse-glow">
     <img src="images/8.jpg" alt="Gallery 3">
   </div>
 
-  <div class="card">
+  <div class="card pulse-glow">
     <img src="images/9.jpg" alt="Featured Project">
   </div>
-  <div class="card">
+  <div class="card pulse-glow">
     <img src="images/10.jpg" alt="Gallery 1">
   </div>
-  <div class="card card-large">
+  <div class="card card-large pulse-glow">
     <img src="images/11.jpg" alt="Gallery 2">
   </div>
-  <div class="card card-wide">
+  <div class="card card-wide pulse-glow">
     <img src="images/12.jpg" alt="Wide View">
   </div>
-  <div class="card">
+  <div class="card pulse-glow">
     <img src="images/13.jpg" alt="Vertical Shot">
   </div>
-  <div class="card">
+  <div class="card pulse-glow">
     <img src="images/14.jpg" alt="Gallery 3">
   </div>
-  <div class="card">
+  <div class="card pulse-glow">
     <img src="images/15.jpg" alt="Gallery 3">
   </div>
 
-  <div class="card card-large">
+  <div class="card card-large pulse-glow">
     <img src="images/16.jpg" alt="Featured Project">
   </div>
-  <div class="card card-tall">
+  <div class="card card-tall pulse-glow">
     <img src="images/17.jpg" alt="Gallery 1">
   </div>
-  <div class="card">
+  <div class="card pulse-glow">
     <img src="images/18.jpg" alt="Gallery 2">
   </div>
-  <div class="card card-wide">
+  <div class="card card-wide pulse-glow">
     <img src="images/19.jpg" alt="Wide View">
   </div>
-  <div class="card c">
+  <div class="card pulse-glow">
     <img src="images/20.jpg" alt="Vertical Shot">
   </div>
-  <div class="card">
+  <div class="card pulse-glow">
     <img src="images/21.jpg" alt="Gallery 3">
   </div>
-  <div class="card">
+  <div class="card pulse-glow">
     <img src="images/22.jpg" alt="Gallery 3">
   </div>
 
-  <div class="card card-large">
+  <div class="card card-large pulse-glow">
     <img src="images/23.jpg" alt="Featured Project">
   </div>
-  <div class="card card-tall">
+  <div class="card card-tall pulse-glow">
     <img src="images/24.jpg" alt="Gallery 1">
   </div>
-  <div class="card">
+  <div class="card pulse-glow">
     <img src="images/25.jpg" alt="Gallery 2">
   </div>
-  <div class="card card-large">
+  <div class="card card-large pulse-glow">
     <img src="images/26.jpg" alt="Wide View">
   </div>
-  <div class="card card-tall">
+  <div class="card card-tall pulse-glow">
     <img src="images/27.jpg" alt="Vertical Shot">
   </div>
-  <div class="card">
+  <div class="card pulse-glow">
     <img src="images/28.jpg" alt="Gallery 3">
   </div>
-  <div class="card">
+  <div class="card pulse-glow">
     <img src="images/29.jpg" alt="Gallery 3">
   </div>
 
-   <div class="card card-tall">
+   <div class="card card-tall pulse-glow">
     <img src="images/30.jpg" alt="Featured Project">
   </div>
-  <div class="card card-tall">
+  <div class="card card-tall pulse-glow">
     <img src="images/31.jpg" alt="Gallery 1">
   </div>
-  <div class="card card-wide">
+  <div class="card card-wide pulse-glow">
     <img src="images/32.jpg" alt="Gallery 2">
   </div>
-  <div class="card card-large">
+  <div class="card card-large pulse-glow">
     <img src="images/33.jpg" alt="Wide View">
   </div>
-  <div class="card card-tall">
+  <div class="card card-tall pulse-glow">
     <img src="images/34.jpg" alt="Vertical Shot">
   </div>
-  <div class="card">
+  <div class="card pulse-glow">
     <img src="images/35.jpg" alt="Gallery 3">
   </div>
-  <div class="card">
+  <div class="card pulse-glow">
     <img src="images/36.jpg" alt="Gallery 3">
   </div>
 
-   <div class="card card-large">
+   <div class="card card-large pulse-glow">
     <img src="images/37.jpg" alt="Featured Project">
   </div>
-  <div class="card card-tall">
+  <div class="card card-tall pulse-glow">
     <img src="images/38.jpg" alt="Gallery 1">
   </div>
-  <div class="card">
+  <div class="card pulse-glow">
     <img src="images/39.jpg" alt="Gallery 2">
   </div>
-  <div class="card card-large">
+  <div class="card card-large pulse-glow">
     <img src="images/40.jpg" alt="Wide View">
   </div>
-  <div class="card card-tall">
+  <div class="card card-tall pulse-glow">
     <img src="images/41.jpg" alt="Vertical Shot">
   </div>
-  <div class="card">
+  <div class="card pulse-glow">
     <img src="images/42.jpg" alt="Gallery 3">
   </div>
-  <div class="card">
+  <div class="card pulse-glow">
     <img src="images/43.jpg" alt="Gallery 3">
   </div>
 
-   <div class="card card-large">
+   <div class="card card-large pulse-glow">
     <img src="images/44.jpg" alt="Featured Project">
   </div>
-  <div class="card card-tall">
+  <div class="card card-tall pulse-glow">
     <img src="images/45.jpg" alt="Gallery 1">
   </div>
-  <div class="card">
+  <div class="card pulse-glow">
     <img src="images/46.jpg" alt="Gallery 2">
   </div>
-  <div class="card card-large">
+  <div class="card card-large pulse-glow">
     <img src="images/47.jpg" alt="Wide View">
   </div>
-  <div class="card card-tall">
+  <div class="card card-tall pulse-glow">
     <img src="images/48.jpg" alt="Vertical Shot">
   </div>
-  <div class="card">
+  <div class="card pulse-glow">
     <img src="images/49.jpg" alt="Gallery 3">
   </div>
-  <div class="card">
+  <div class="card pulse-glow">
     <img src="images/50.jpg" alt="Gallery 3">
   </div>
 
-   <div class="card card-tall">
+   <div class="card card-tall pulse-glow">
     <img src="images/51.jpg" alt="Featured Project">
   </div>
-  <div class="card card-tall">
+  <div class="card card-tall pulse-glow">
     <img src="images/52.jpg" alt="Gallery 1">
   </div>
-  <div class="card card-large">
+  <div class="card card-large pulse-glow">
     <img src="images/53.jpg" alt="Gallery 2">
   </div>
-  <div class="card card-large">
+  <div class="card card-large pulse-glow">
     <img src="images/54.jpg" alt="Wide View">
   </div>
-  <div class="card card-tall">
+  <div class="card card-tall pulse-glow">
     <img src="images/55.jpg" alt="Vertical Shot">
   </div>
-  <div class="card">
+  <div class="card pulse-glow">
     <img src="images/56.jpg" alt="Gallery 3">
   </div>
-  <div class="card">
+  <div class="card pulse-glow">
     <img src="images/57.jpg" alt="Gallery 3">
   </div>
 
-  <div class="card card-tall">
+  <div class="card card-tall pulse-glow">
     <img src="images/58.jpg" alt="Featured Project">
   </div>
-  <div class="card card-tall">
+  <div class="card card-tall pulse-glow">
     <img src="images/59.jpg" alt="Gallery 1">
   </div>
-  <div class="card card-large">
+  <div class="card card-large pulse-glow">
     <img src="images/60.jpg" alt="Gallery 2">
   </div>
-  <div class="card card-large">
+  <div class="card card-large pulse-glow">
     <img src="images/61.jpg" alt="Wide View">
   </div>
-  <div class="card card-tall">
+  <div class="card card-tall pulse-glow">
     <img src="images/62.jpg" alt="Vertical Shot">
   </div>
-  <div class="card">
+  <div class="card pulse-glow">
     <img src="images/63.jpg" alt="Gallery 3">
   </div>
-  <div class="card">
+  <div class="card pulse-glow">
     <img src="images/64.jpg" alt="Gallery 3">
   </div>
 
@@ -397,8 +374,8 @@
 
 
                     <div class="col-md-6">
-                        <img src="images\contact.webp" width="400" style="border: 8px solid white; border-radius: 20px; box-shadow: 0px 4px 10px rgb(255, 0, 220);" 
-                        class="img-fluid mb-5 float-animation" />
+                        <img src="images\contact.webp" width="400" style="border: 1px solid pink; border-radius: 20px;" 
+                        class="float-animation pulse-glow" />
                         
 
                     </div>
@@ -409,11 +386,11 @@
 
     <br><br>
 
-    <button id="scrollTopBtn" title="Go to top">&#8593;</button>
+    <button id="scrollTopBtn" title="Back Up">↑</button>
 
     <!-- Footer -->
 
-<nav class="navbar navbar-expand-sm navbar-dark" style="font-family: 'Orbitron', sans-serif; letter-spacing: 2px; background-color: rgba(0, 0, 0, 0.7);">
+<nav class="navbar navbar-expand-sm navbar-dark artistic-nav">
      <div class="container-fluid justify-content-center">
          <span class="navbar-text text-center">
              &copy; 2026 RKG's AI Art. All rights reserved.
